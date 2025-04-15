@@ -134,12 +134,25 @@ void AudioSwitcherStreamDeckPlugin::KeyUpForAction(
     : settings.VolatileSecondaryID();
 
   if (deviceID.empty()) {
+    ESDDebug("Doing nothing, no device ID");
     return;
   }
 
   const auto deviceState = GetAudioDeviceState(deviceID);
   if (deviceState != AudioDeviceState::CONNECTED) {
+    if (inAction == SET_ACTION_ID) {
+      mConnectionManager->SetState(1, inContext);
+    }
     mConnectionManager->ShowAlertForContext(inContext);
+    return;
+  }
+
+  if (
+    inAction == SET_ACTION_ID
+    && deviceID == GetDefaultAudioDeviceID(settings.direction, settings.role)) {
+    // We already have the correct device, undo the state change
+    mConnectionManager->SetState(state, inContext);
+    ESDDebug("Already set, nothing to do");
     return;
   }
 
