@@ -87,3 +87,6 @@ class AudioSwitcherStreamDeckPlugin : public ESDBasePlugin {
   void UpdateState(const std::string& context, const std::string& device = "");
   void FillButtonDeviceInfo(const std::string& context);
 };
+
+// Function to trigger hotkeys with the given configuration
+void TriggerHotkey(const HotkeyConfig& hotkey);

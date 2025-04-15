@@ -58,6 +58,162 @@
         <option value="Fuzzy">Fuzzy</option>
       </select>
     </div>
+    
+    <div type="checkbox" class="sdpi-item">
+      <div class="sdpi-item-label">Primary Hotkey</div>
+      <div class="sdpi-item-value">
+        <span class="sdpi-item-child">
+          <input id="primaryHotkeyEnabled" type="checkbox" onchange="updateHotkey('primary');" />
+          <label for="primaryHotkeyEnabled" class="sdpi-item-label"><span></span>Enable</label>
+        </span>
+      </div>
+    </div>
+
+    <div id="primaryHotkeyConfigDiv" class="sdpi-item" style="display: none;">
+      <div class="sdpi-item-label">Primary Hotkey</div>
+      <div class="sdpi-item-value">
+        <div class="sdpi-item-child">
+          <span class="sdpi-item-child">
+            <input id="primaryHotkeyCtrl" type="checkbox" onchange="saveSettings();" />
+            <label for="primaryHotkeyCtrl" class="sdpi-item-label"><span></span>Ctrl</label>
+          </span>
+          <span class="sdpi-item-child">
+            <input id="primaryHotkeyAlt" type="checkbox" onchange="saveSettings();" />
+            <label for="primaryHotkeyAlt" class="sdpi-item-label"><span></span>Alt</label>
+          </span>
+          <span class="sdpi-item-child">
+            <input id="primaryHotkeyShift" type="checkbox" onchange="saveSettings();" />
+            <label for="primaryHotkeyShift" class="sdpi-item-label"><span></span>Shift</label>
+          </span>
+          <span class="sdpi-item-child">
+            <input id="primaryHotkeyWin" type="checkbox" onchange="saveSettings();" />
+            <label for="primaryHotkeyWin" class="sdpi-item-label"><span></span>Win/Cmd</label>
+          </span>
+        </div>
+        <div class="sdpi-item-child">
+          <select class="sdpi-item-value select" id="primaryHotkeyKey" onchange="saveSettings();">
+            <!-- Common keys -->
+            <option value="">Select a key...</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+            <option value="P">P</option>
+            <option value="Q">Q</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+            <option value="T">T</option>
+            <option value="U">U</option>
+            <option value="V">V</option>
+            <option value="W">W</option>
+            <option value="X">X</option>
+            <option value="Y">Y</option>
+            <option value="Z">Z</option>
+            <option value="F1">F1</option>
+            <option value="F2">F2</option>
+            <option value="F3">F3</option>
+            <option value="F4">F4</option>
+            <option value="F5">F5</option>
+            <option value="F6">F6</option>
+            <option value="F7">F7</option>
+            <option value="F8">F8</option>
+            <option value="F9">F9</option>
+            <option value="F10">F10</option>
+            <option value="F11">F11</option>
+            <option value="F12">F12</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div type="checkbox" class="sdpi-item" id="secondaryHotkeyDiv">
+      <div class="sdpi-item-label">Secondary Hotkey</div>
+      <div class="sdpi-item-value">
+        <span class="sdpi-item-child">
+          <input id="secondaryHotkeyEnabled" type="checkbox" onchange="updateHotkey('secondary');" />
+          <label for="secondaryHotkeyEnabled" class="sdpi-item-label"><span></span>Enable</label>
+        </span>
+      </div>
+    </div>
+
+    <div id="secondaryHotkeyConfigDiv" class="sdpi-item" style="display: none;">
+      <div class="sdpi-item-label">Secondary Hotkey</div>
+      <div class="sdpi-item-value">
+        <div class="sdpi-item-child">
+          <span class="sdpi-item-child">
+            <input id="secondaryHotkeyCtrl" type="checkbox" onchange="saveSettings();" />
+            <label for="secondaryHotkeyCtrl" class="sdpi-item-label"><span></span>Ctrl</label>
+          </span>
+          <span class="sdpi-item-child">
+            <input id="secondaryHotkeyAlt" type="checkbox" onchange="saveSettings();" />
+            <label for="secondaryHotkeyAlt" class="sdpi-item-label"><span></span>Alt</label>
+          </span>
+          <span class="sdpi-item-child">
+            <input id="secondaryHotkeyShift" type="checkbox" onchange="saveSettings();" />
+            <label for="secondaryHotkeyShift" class="sdpi-item-label"><span></span>Shift</label>
+          </span>
+          <span class="sdpi-item-child">
+            <input id="secondaryHotkeyWin" type="checkbox" onchange="saveSettings();" />
+            <label for="secondaryHotkeyWin" class="sdpi-item-label"><span></span>Win/Cmd</label>
+          </span>
+        </div>
+        <div class="sdpi-item-child">
+          <select class="sdpi-item-value select" id="secondaryHotkeyKey" onchange="saveSettings();">
+            <!-- Common keys -->
+            <option value="">Select a key...</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+            <option value="K">K</option>
+            <option value="L">L</option>
+            <option value="M">M</option>
+            <option value="N">N</option>
+            <option value="O">O</option>
+            <option value="P">P</option>
+            <option value="Q">Q</option>
+            <option value="R">R</option>
+            <option value="S">S</option>
+            <option value="T">T</option>
+            <option value="U">U</option>
+            <option value="V">V</option>
+            <option value="W">W</option>
+            <option value="X">X</option>
+            <option value="Y">Y</option>
+            <option value="Z">Z</option>
+            <option value="F1">F1</option>
+            <option value="F2">F2</option>
+            <option value="F3">F3</option>
+            <option value="F4">F4</option>
+            <option value="F5">F5</option>
+            <option value="F6">F6</option>
+            <option value="F7">F7</option>
+            <option value="F8">F8</option>
+            <option value="F9">F9</option>
+            <option value="F10">F10</option>
+            <option value="F11">F11</option>
+            <option value="F12">F12</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="common.js"></script>
@@ -102,6 +258,52 @@
         } else {
           child.removeAttribute("selected");
         }
+      }
+      
+      // Initialize primary hotkey UI elements
+      const primaryHotkey = settings.primaryHotkey || settings.hotkey || {};
+      const primaryHotkeyEnabled = primaryHotkey.enabled || false;
+      document.getElementById('primaryHotkeyEnabled').checked = primaryHotkeyEnabled;
+      document.getElementById('primaryHotkeyConfigDiv').style.display = primaryHotkeyEnabled ? 'flex' : 'none';
+      
+      document.getElementById('primaryHotkeyCtrl').checked = primaryHotkey.ctrl || false;
+      document.getElementById('primaryHotkeyAlt').checked = primaryHotkey.alt || false;
+      document.getElementById('primaryHotkeyShift').checked = primaryHotkey.shift || false;
+      document.getElementById('primaryHotkeyWin').checked = primaryHotkey.win || false;
+      
+      const primaryHotkeyKey = primaryHotkey.keyCode || "";
+      for (const child of document.getElementById('primaryHotkeyKey').children) {
+        if (child.value == primaryHotkeyKey) {
+          child.setAttribute("selected", "selected");
+        } else {
+          child.removeAttribute("selected");
+        }
+      }
+
+      // Initialize secondary hotkey UI elements
+      const secondaryHotkey = settings.secondaryHotkey || {};
+      const secondaryHotkeyEnabled = secondaryHotkey.enabled || false;
+      document.getElementById('secondaryHotkeyEnabled').checked = secondaryHotkeyEnabled;
+      document.getElementById('secondaryHotkeyConfigDiv').style.display = secondaryHotkeyEnabled ? 'flex' : 'none';
+      
+      document.getElementById('secondaryHotkeyCtrl').checked = secondaryHotkey.ctrl || false;
+      document.getElementById('secondaryHotkeyAlt').checked = secondaryHotkey.alt || false;
+      document.getElementById('secondaryHotkeyShift').checked = secondaryHotkey.shift || false;
+      document.getElementById('secondaryHotkeyWin').checked = secondaryHotkey.win || false;
+      
+      const secondaryHotkeyKey = secondaryHotkey.keyCode || "";
+      for (const child of document.getElementById('secondaryHotkeyKey').children) {
+        if (child.value == secondaryHotkeyKey) {
+          child.setAttribute("selected", "selected");
+        } else {
+          child.removeAttribute("selected");
+        }
+      }
+
+      // Hide secondary hotkey controls for "set" action
+      if (actionInfo == "com.fredemmott.audiooutputswitch.set") {
+        document.getElementById('secondaryHotkeyDiv').style.display = 'none';
+        document.getElementById('secondaryHotkeyConfigDiv').style.display = 'none';
       }
 
       inputDevices = payload['inputDevices'];
@@ -229,11 +431,19 @@
       if (actionInfo == "com.fredemmott.audiooutputswitch.set") {
         document.querySelector('#primaryDeviceDiv .sdpi-item-label').innerText = 'Device';
         document.getElementById('secondaryDeviceDiv').style.display = 'none';
+        document.getElementById('secondaryHotkeyDiv').style.display = 'none';
+        document.getElementById('secondaryHotkeyConfigDiv').style.display = 'none';
       }
 
       // request settings and list of devices
       $SD.api.sendToPlugin(uuid, actionInfo, { event: "getDeviceList" });
     };
+
+    function updateHotkey(device) {
+      const hotkeyEnabled = document.getElementById(`${device}HotkeyEnabled`).checked;
+      document.getElementById(`${device}HotkeyConfigDiv`).style.display = hotkeyEnabled ? 'flex' : 'none';
+      saveSettings();
+    }
 
     function saveSettings() {
       const isInput = document.getElementById('input').checked;
@@ -247,6 +457,37 @@
       settings.direction = isInput ? 'input' : 'output';
       settings.role = document.getElementById('defaultRole').checked ? 'default' : 'communication';
       settings.matchStrategy = document.getElementById('matchStrategy').value;
+      
+      // Save primary hotkey configuration
+      settings.primaryHotkey = {
+        enabled: document.getElementById('primaryHotkeyEnabled').checked,
+        ctrl: document.getElementById('primaryHotkeyCtrl').checked,
+        alt: document.getElementById('primaryHotkeyAlt').checked,
+        shift: document.getElementById('primaryHotkeyShift').checked,
+        win: document.getElementById('primaryHotkeyWin').checked,
+        keyCode: document.getElementById('primaryHotkeyKey').value
+      };
+      
+      // For backward compatibility
+      settings.hotkey = {
+        enabled: document.getElementById('primaryHotkeyEnabled').checked,
+        ctrl: document.getElementById('primaryHotkeyCtrl').checked,
+        alt: document.getElementById('primaryHotkeyAlt').checked,
+        shift: document.getElementById('primaryHotkeyShift').checked,
+        win: document.getElementById('primaryHotkeyWin').checked,
+        keyCode: document.getElementById('primaryHotkeyKey').value
+      };
+      
+      // Save secondary hotkey configuration
+      settings.secondaryHotkey = {
+        enabled: document.getElementById('secondaryHotkeyEnabled').checked,
+        ctrl: document.getElementById('secondaryHotkeyCtrl').checked,
+        alt: document.getElementById('secondaryHotkeyAlt').checked,
+        shift: document.getElementById('secondaryHotkeyShift').checked,
+        win: document.getElementById('secondaryHotkeyWin').checked,
+        keyCode: document.getElementById('secondaryHotkeyKey').value
+      };
+      
       console.log(settings);
       $SD.api.setSettings(uuid, settings);
     }

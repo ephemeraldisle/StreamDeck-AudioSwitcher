@@ -16,12 +16,23 @@ enum class DeviceMatchStrategy {
   Fuzzy,
 };
 
+struct HotkeyConfig {
+  bool enabled = false;
+  bool ctrl = false;
+  bool alt = false;
+  bool shift = false;
+  bool win = false;// Command key on macOS
+  std::string keyCode = "";// Key identifier
+};
+
 struct ButtonSettings {
   AudioDeviceDirection direction = AudioDeviceDirection::INPUT;
   AudioDeviceRole role = AudioDeviceRole::DEFAULT;
   AudioDeviceInfo primaryDevice;
   AudioDeviceInfo secondaryDevice;
   DeviceMatchStrategy matchStrategy = DeviceMatchStrategy::ID;
+  HotkeyConfig primaryHotkey;
+  HotkeyConfig secondaryHotkey;
 
   // Changes if there's a fuzzy match
   std::string VolatilePrimaryID() const;
